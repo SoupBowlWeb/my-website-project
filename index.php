@@ -23,19 +23,19 @@
     <div class="container" id="content">
         <div class="row">
             <div id="building">
-                <div class="floor">
+                <div class="floor" id="floor-1">
                     <h1>Welcome to Floor 5</h1>
                 </div>
-                <div class="floor">
+                <div class="floor" id="floor-2">
                     <h1>Welcome to Floor 4</h1>
                 </div>
-                <div class="floor">
+                <div class="floor" id="floor-3">
                     <h1>Welcome to Floor 3</h1>
                 </div>
-                <div class="floor">
+                <div class="floor" id="floor-4">
                     <h1>Welcome to Floor 2</h1>
                 </div>
-                <div class="floor">
+                <div class="floor" id="floor-5">
                     <h1>Welcome to Floor 1</h1>
                 </div>
             </div>
@@ -49,22 +49,42 @@
                 <br>
             </div>
         </div>
-
-
+        
     </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="js/lib/elavator.min.js"></script>
-    <script>
-        window.onload = function() {
-            var elevator = new Elevator({
-                element: document.querySelector('#back-to-top'),
-                mainAudio: 'audio/elevator.mp3',
-                endAudio: 'audio/ding.mp3',
-                duration: 15000
-            });
-        }
-    </script>
+<script src="js/lib/jquery.waypoints.min.js"></script>
+<script>
+    window.onload = function() {
+        var elevator = new Elevator({
+            element: document.querySelector('#back-to-top'),
+            mainAudio: 'audio/elevator.mp3',
+            endAudio: 'audio/ding.mp3',
+            duration: 15000
+        });
+    }
+</script>
+<script>
+    for (var i = 1; i <= 5; i++) {
+        new Waypoint({
+            element: document.getElementById('floor-' + i),
+            handler: function(direction) {
+                switch(direction) {
+                    case 'down':
+
+                        break;
+
+                    case 'up':
+
+                        break;
+                }
+            }
+        });
+    }
+
+
+</script>
 </body>
 </html>
