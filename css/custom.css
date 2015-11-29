@@ -1,5 +1,27 @@
+#logo {
+    display: block;
+    top: 260px;
+    right: 0;
+    max-width: 200px;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#logo:hover {
+    text-decoration: none;
+}
+
+#logo img {
+    max-width: 100%;
+}
+
 #content {
     z-index: 10;
+    position: relative;
 }
 
 #building {
@@ -14,6 +36,16 @@
     min-height: 1000px;
     color: white;
     background: #AAA;
+    position: relative;
+}
+
+.floor .wrap {
+    position: absolute;
+    bottom: 50px;
+}
+
+.floor .wrap img {
+    min-width: 400px;
 }
 
 .floor:first-child {
@@ -22,4 +54,27 @@
 
 .floor:last-child {
     border-bottom-width: 20px;
+}
+
+
+#floor-descriptions {
+    position: fixed;
+    top: 0;
+    z-index: 11;
+}
+
+#floor-descriptions  .floor-description {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    min-width: 300px;
+}
+
+#grass {
+    min-height: 300px;
+    background-color: green;
+    margin-top: -200px;
+    z-index: -10;
+    position: relative;
 }
